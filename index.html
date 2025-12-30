@@ -757,6 +757,54 @@
     .whatsapp-float:hover::before {
       opacity: 1;
     }
+
+    /* ========== BOTÃO ENVIAR ARQUIVO FLUTUANTE ========== */
+    .upload-float {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      z-index: 9999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .upload-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+    }
+
+    .upload-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    .upload-float::before {
+      content: 'Enviar Arquivo';
+      position: absolute;
+      right: 70px;
+      background: #333;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .upload-float:hover::before {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -900,6 +948,13 @@
       </div>
     </div>
   </section>
+
+  <!-- Botão Enviar Arquivo Flutuante -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRY3yktudHIXyrhpEJ5qtOZ_-epeDGTeKcvLfjjkLykOg9GQ/viewform?usp=publish-editor" target="_blank" class="upload-float" aria-label="Enviar Arquivo">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-5-6v4h-2v-4H8l4-4 4 4h-3z"/>
+    </svg>
+  </a>
 
   <!-- WhatsApp Flutuante -->
   <a href="https://wa.me/244942688960?text=Olá Joel! Vi o seu portfólio e gostaria de saber mais sobre os seus serviços." target="_blank" class="whatsapp-float" aria-label="Contactar pelo WhatsApp">
