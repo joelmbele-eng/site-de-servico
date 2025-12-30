@@ -134,6 +134,83 @@
       width: 100%;
     }
 
+    .navbar-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .nav-btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .nav-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+
+    .nav-btn-success {
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+    }
+
+    .nav-btn-success:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(17, 153, 142, 0.6);
+    }
+
+    .nav-btn-upload {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+    }
+
+    .nav-btn-upload:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+    }
+
+    @media (max-width: 1200px) {
+      .navbar-actions {
+        display: none;
+      }
+      
+      .navbar-actions.mobile-show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(19, 17, 26, 0.98);
+        padding: 20px;
+        gap: 10px;
+      }
+    }
+
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -862,6 +939,26 @@
         <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#contato">Contacto</a></li>
       </ul>
+      <div class="navbar-actions" id="navActions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFGywZEQup8epeq_PIHDk-mKwx6xg09O1ugGdURWHA_x1Bqw/viewform?usp=sharing" target="_blank" class="nav-btn nav-btn-primary">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+          </svg>
+          Solicitar Serviço
+        </a>
+        <a href="Tabela de Preços.pdf" download class="nav-btn nav-btn-success">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+          </svg>
+          Tabela de Preços
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRY3yktudHIXyrhpEJ5qtOZ_-epeDGTeKcvLfjjkLykOg9GQ/viewform" target="_blank" class="nav-btn nav-btn-upload">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+          </svg>
+          Enviar Arquivo
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -987,13 +1084,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Botão Enviar Arquivo Flutuante -->
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRY3yktudHIXyrhpEJ5qtOZ_-epeDGTeKcvLfjjkLykOg9GQ/viewform?usp=publish-editor" target="_blank" class="upload-float" aria-label="Enviar Arquivo">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-    </svg>
-  </a>
 
   <!-- WhatsApp Flutuante -->
   <a href="https://wa.me/244942688960?text=Olá Joel! Vi o seu portfólio e gostaria de saber mais sobre os seus serviços." target="_blank" class="whatsapp-float" aria-label="Contactar pelo WhatsApp">
